@@ -1,4 +1,4 @@
-# MLX90614
+# MicroPython MLX90614
 
 A MicroPython library for interfacing with a MLX90614 IR temperature sensor.
 
