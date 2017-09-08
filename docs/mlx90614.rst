@@ -21,3 +21,7 @@ MLX90614
     .. method:: read_object_temp()
 
         Get the object temperature in Celcius
+
+    .. method:: read_object_temp2()
+
+        Get the object temperature in Celcius from the second measurement zone
