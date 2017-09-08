@@ -6,6 +6,7 @@ import ustruct
 
 _REGISTER_TA = const(0x06)     # ambient
 _REGISTER_TOBJ1 = const(0x07)  # object
+_REGISTER_TOBJ2 = const(0x08)  # object
 
 class MLX90614:
 	def __init__(self, i2c, address=0x5a):
@@ -29,3 +30,6 @@ class MLX90614:
 
 	def read_object_temp(self):
 		return self.read_temp(_REGISTER_TOBJ1)
+
+	def read_object_temp2(self):
+		return self.read_temp(_REGISTER_TOBJ2)
