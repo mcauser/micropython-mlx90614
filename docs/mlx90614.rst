@@ -24,7 +24,7 @@ MLX90614
 
         Get the object temperature from the first or only thermopile
 
-    .. method:: read_object_temp2()
+    .. method:: read_object2_temp()
 
         Get the object temperature the second thermopile, if it exists
 
