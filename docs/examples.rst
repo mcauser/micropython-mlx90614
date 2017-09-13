@@ -16,6 +16,8 @@ Now, to make basic measurement::
     sensor = mlx90614.MLX90614(i2c)
     print(sensor.read_ambient_temp())
     print(sensor.read_object_temp())
+    if sensor.dual_zone:
+        print(sensor.object2_temp)
 
 To perform continuous measurement::
 
@@ -23,3 +25,7 @@ To perform continuous measurement::
     while True:
         print(sensor.read_ambient_temp(), sensor.read_object_temp())
         time.sleep_ms(500)
+
+There are some useful properties:
+    * ``.dual_zone`` - set to ``True`` if the sensor has two thermopiles
+    * ``.ambient_temp`` - equivalent to read_ambient_temp(), also works for object and object2

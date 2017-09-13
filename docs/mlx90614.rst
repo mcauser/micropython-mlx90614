@@ -14,14 +14,32 @@ MLX90614
     specifies which sensor to connect to, if you have more than one and have
     changed their addresses with the ``Addr`` pin.
 
+    All temperatures are returned in Celsius.
+
     .. method:: read_ambient_temp()
 
-        Get the ambient temperature in Celcius
+        Get the ambient sensor temperature
 
     .. method:: read_object_temp()
 
-        Get the object temperature in Celcius
+        Get the object temperature from the first or only thermopile
 
-    .. method:: read_object_temp2()
+    .. method:: read_object2_temp()
 
-        Get the object temperature in Celcius from the second measurement zone
+        Get the object temperature the second thermopile, if it exists
+
+    .. property:: dual_zone
+
+        set to ``True`` if this sensor has two thermopiles
+
+    .. property:: ambient_temp
+
+        Equivalent to ``read_ambient_temp()``
+
+    .. property:: object_temp
+
+        Equivalent to ``read_object_temp()``
+
+    .. property:: object2_temp
+
+        Equivalent to ``read_object2_temp()``
